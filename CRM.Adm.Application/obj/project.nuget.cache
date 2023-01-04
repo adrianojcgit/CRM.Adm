@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "RDMvw2DbsSPfSuTNF2rEYpODOocUE+3ZkLWXjYKOH2wWzoc4xIff/DEGH/If55ZF8EpB88x2T8tJWVqCIUb/kA==",
+  "success": true,
+  "projectFilePath": "C:\\Adriano\\Projetos\\CRM\\CRM.Adm\\CRM.Adm.Application\\CRM.Adm.Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\adria\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
+    "C:\\Users\\adria\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}

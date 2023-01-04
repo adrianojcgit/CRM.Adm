@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "CRM.Adm.Domain/1.0.0": {
+        "runtime": {
+          "CRM.Adm.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CRM.Adm.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

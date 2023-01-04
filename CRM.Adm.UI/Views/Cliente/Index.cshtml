@@ -1,0 +1,92 @@
+﻿@model IEnumerable<CRM.Adm.Application.DTOs.ClienteDTO>
+
+@{
+	ViewData["Title"] = "Clientes";
+}
+
+<div>
+	<h2>@ViewData["Title"]</h2>
+</div>
+<hr />
+<form asp-action="Index">
+
+	<div class="row">
+		<div class="col-md-12">
+
+			<div class="row">
+				<div>
+					<a asp-action="Create" class="btn btn-primary">
+						<span title="Register New" class="fas fa-plus"></span> Novo
+					</a>
+				</div>
+				<div>
+					<input type="text" name="NomeEmpresarial" id="NomeEmpresarial" class="form-control" />
+				</div>
+				<div>
+					<button type="submit" class="btn btn-warning" name="btnPesquisar" id="btnPesquisar" value="">Pesquisar</button>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<br />
+
+	<div class="panel panel-default">
+		<table class="table table-striped table-responsive-sm table-striped" style= "white-space: nowrap;">
+			<thead>
+				<tr>
+					<th>
+						@Html.DisplayNameFor(model => model.NomeEmpresarial)
+					</th>					
+					<th>
+						@Html.DisplayNameFor(model => model.NomeFantasia)
+					</th>
+					
+					<th>
+						@Html.DisplayNameFor(model => model.CnpjNumInscricao)
+					</th>
+					<th>
+						@Html.DisplayNameFor(model => model.FatBrutoAnual)
+					</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				@if (Model != null)
+				{
+					@foreach (var item in Model)
+					{
+						<tr>
+							<td>
+								@Html.DisplayFor(modelItem => item.NomeEmpresarial)
+							</td>
+							<td>
+								@Html.DisplayFor(modelItem => item.NomeFantasia)
+							</td>							
+							<td>
+								@Html.DisplayFor(modelItem => item.CnpjNumInscricao)
+							</td>
+							<td>
+								@Html.DisplayFor(modelItem => item.FatBrutoAnual)
+							</td>
+							<td>
+								<a asp-action="Edit" asp-route-id="@item.Id" title="Edit" class="btn btn-warning">
+									<span class="fas fa-edit">Edit</span>
+								</a>
+
+								<a asp-action="Details" asp-route-id="@item.Id" title="Details" class="btn btn-primary">
+									<span class="fas fa-search">Details</span>
+								</a>
+
+								<a asp-action="Delete" asp-route-id="@item.Id" title="Delete" class="btn btn-danger">
+									<span class="fas fa-trash-alt">Delete</span>
+								</a>
+							</td>
+						</tr>
+					}
+				}
+			</tbody>
+		</table>
+	</div>
+</form>
